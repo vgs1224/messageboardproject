@@ -10,7 +10,6 @@ namespace MessageBoardApp.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MessageBoardApp.Data.MessageBoardAppContext";
         }
 
         protected override void Seed(MessageBoardApp.Data.MessageBoardAppContext context)

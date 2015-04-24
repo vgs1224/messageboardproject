@@ -8,26 +8,27 @@ using System.Web;
 using System.Web.Mvc;
 using MessageBoardApp.Data;
 using MessageBoardApp.Models;
-using MessageBoardApp.Services.PostThread;
+using MessageBoardApp.Services.PostComment;
 
 namespace MessageBoardApp.Controllers
 {
     [Authorize]
-    public class ThreadController : Controller
+    public class CommentController : Controller
     {
-        private PostThreadService threadService;
 
-        public ThreadController()
+        private PostCommentService commentService;
+
+        public CommentController()
         {
-            this.threadService = new PostThreadService();
+            this.commentService = new PostCommentService();
         }
 
-        
+
         public ActionResult Index()
         {
-            var allthreads = this.threadService.GetThreads();
+            var allcommentsforpost = this.commentService.GetComments();
 
-            return View(allthreads);
+            return View(allcommentsforpost);
         }
 
         [HttpGet]
@@ -35,29 +36,29 @@ namespace MessageBoardApp.Controllers
         {
             return View();
         }
-        
-        [HttpPost]
-        public ActionResult Create(Thread thread)
-        {
-            thread.Author = this.HttpContext.User.Identity.Name;
 
-            this.threadService.SaveThread(thread);
+        [HttpPost]
+        public ActionResult Create(Comment comment)
+        {
+            comment.Author = this.HttpContext.User.Identity.Name;
+
+            this.commentService.SaveComment(comment);
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(int id)
         {
-            var result = this.threadService.GetThreadById(id);
+            var result = this.commentService.GetCommentById(id);
             return View(result);
         }
 
         public ActionResult Delete(int id)
         {
-            this.threadService.DeleteThread(id);
-            return RedirectToAction("Index", "Thread");
+            this.commentService.DeleteComment(id);
+            return RedirectToAction("Index", "Comment");
 
         }
 
-       
+
     }
 }

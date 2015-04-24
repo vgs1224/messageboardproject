@@ -23,7 +23,8 @@ namespace MessageBoardApp.Services
         {
             string encryptedPassword = this.encryptor.Encrypt(password);
 
-            User user = this.context.Users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password == encryptedPassword).SingleOrDefault();
+            User user = this.context.Users.Where(x => x.Username.ToLower() == username.ToLower() 
+                && x.Password == encryptedPassword).SingleOrDefault();
 
             if (user == null)
             {

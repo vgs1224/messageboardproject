@@ -6,17 +6,17 @@ using System.Web;
 
 namespace MessageBoardApp.Models
 {
-    public class Thread
+    public class Comment
     {
+        public int commentId { get; set; }
 
-        public int Id { get; set; }
-
-        public string Title { get; set; }
-
-        public string Message { get; set; }
+        public string Text { get; set; }
 
         public string Author { get; set; }
 
 
+       /* [ForeignKey("Thread")]
+        public int Id { get; set; }*/
+       
     }
 }

@@ -7,13 +7,13 @@ namespace MessageBoardApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddMigration : IMigrationMetadata
+    public sealed partial class aefijwe : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(aefijwe));
         
         string IMigrationMetadata.Id
         {
-            get { return "201504090321558_Add-Migration"; }
+            get { return "201504222119393_aefijwe"; }
         }
         
         string IMigrationMetadata.Source

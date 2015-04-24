@@ -1,5 +1,6 @@
 namespace MessageBoardApp.Data
 {
+    
     using MessageBoardApp.Models;
     using System;
     using System.Data.Entity;
@@ -25,13 +26,10 @@ namespace MessageBoardApp.Data
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Thread> Threads { get; set; }
 
-        public System.Data.Entity.DbSet<MessageBoardApp.Models.Thread> Threads { get; set; }
+        public System.Data.Entity.DbSet<MessageBoardApp.Models.Comment> Comments { get; set; }
+
     }
 
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }
