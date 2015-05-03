@@ -137,14 +137,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504222119393_aefijwe.cs" />
-    <Compile Include="Migrations\201504222119393_aefijwe.Designer.cs">
-      <DependentUpon>201504222119393_aefijwe.cs</DependentUpon>
+    <Compile Include="Migrations\201505021926187_thread list and search.cs" />
+    <Compile Include="Migrations\201505021926187_thread list and search.Designer.cs">
+      <DependentUpon>201505021926187_thread list and search.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\CommentList.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\Thread.cs" />
+    <Compile Include="Models\ThreadIndexList.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PostComment\IPostCommentService.cs" />
@@ -199,9 +201,7 @@
     <Content Include="Views\Thread\Index.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Comment\Delete.cshtml" />
-    <Content Include="Views\Comment\Details.cshtml" />
-    <Content Include="Views\Comment\Edit.cshtml" />
-    <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Comment\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -214,8 +214,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504222119393_aefijwe.resx">
-      <DependentUpon>201504222119393_aefijwe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505021926187_thread list and search.resx">
+      <DependentUpon>201505021926187_thread list and search.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

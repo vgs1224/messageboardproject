@@ -3,7 +3,7 @@ namespace MessageBoardApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class aefijwe : DbMigration
+    public partial class threadlistandsearch : DbMigration
     {
         public override void Up()
         {
@@ -14,6 +14,7 @@ namespace MessageBoardApp.Migrations
                         commentId = c.Int(nullable: false, identity: true),
                         Text = c.String(),
                         Author = c.String(),
+                        ThreadId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.commentId);
             
@@ -21,12 +22,12 @@ namespace MessageBoardApp.Migrations
                 "dbo.Threads",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        ThreadId = c.Int(nullable: false, identity: true),
                         Title = c.String(),
                         Message = c.String(),
                         Author = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.ThreadId);
             
             CreateTable(
                 "dbo.Users",

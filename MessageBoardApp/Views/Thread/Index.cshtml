@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MessageBoardApp.Models.Thread>
+﻿@model MessageBoardApp.Models.ThreadIndexList
 
 @{
     ViewBag.Title = "Index";
@@ -9,21 +9,28 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Title: @Html.TextBox("text") <input type = "submit" value= "Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            Title
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Message)
+            Message
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Author)
+            Author
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.Thread) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
@@ -35,13 +42,18 @@
             @Html.DisplayFor(modelItem => item.Author)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            <a href="/Comment/Index/@item.Id">Comments</a>
+          
+            <a href="/Comment/List/@item.ThreadId">Comments</a>
             @if (item.Author.ToLower() == HttpContext.Current.User.Identity.Name.ToLower())
             {
                 <span> | </span>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ThreadId })
+            }
+
+            else if (HttpContext.Current.User.Identity.Name == "Administrator")
+            {
+                <span> | </span>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ThreadId })
             }
 
         </td>

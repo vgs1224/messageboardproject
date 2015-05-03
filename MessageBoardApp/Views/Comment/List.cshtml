@@ -1,26 +1,26 @@
-﻿@model IEnumerable<MessageBoardApp.Models.Comment>
+﻿@model MessageBoardApp.Models.CommentList
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "List";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+   <a href= "/Comment/Create/@Model.ThreadId">Create</a>
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Text)
+            Text
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Author)
+            Author
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model.Comments) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Text)
@@ -29,8 +29,7 @@
             @Html.DisplayFor(modelItem => item.Author)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.commentId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.commentId }) |
+           
             @Html.ActionLink("Delete", "Delete", new { id=item.commentId })
         </td>
     </tr>

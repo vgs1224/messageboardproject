@@ -11,7 +11,7 @@ namespace MessageBoardApp.Services
     {
         List<Comment> GetComments();
 
-        Comment GetCommentById(int id);
+        Comment GetCommentsById(int id);
 
         void SaveComment(Comment comment);
 

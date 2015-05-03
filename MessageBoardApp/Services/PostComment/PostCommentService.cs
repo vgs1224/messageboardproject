@@ -21,7 +21,7 @@ namespace MessageBoardApp.Services.PostComment
             return this.context.Comments.ToList();
         }
 
-        public Comment GetCommentById(int id)
+        public Comment GetCommentsById(int id)
         {
             return this.context.Comments.Where(x => x.commentId == id).SingleOrDefault();
         }
@@ -37,6 +37,11 @@ namespace MessageBoardApp.Services.PostComment
             var comment = this.context.Comments.Where(x => x.commentId == id).SingleOrDefault();
             this.context.Comments.Remove(comment);
             this.context.SaveChanges();
+        }
+
+        public List<Comment> GetCommentsByThreadId(int id)
+        {
+            return this.context.Comments.Where(x => x.ThreadId == id).ToList();
         }
     }
 }

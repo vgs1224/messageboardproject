@@ -27,8 +27,8 @@ namespace MessageBoardApp.Data
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Thread> Threads { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
 
-        public System.Data.Entity.DbSet<MessageBoardApp.Models.Comment> Comments { get; set; }
 
     }
 

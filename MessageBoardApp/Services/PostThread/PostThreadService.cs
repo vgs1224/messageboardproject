@@ -23,7 +23,7 @@ namespace MessageBoardApp.Services.PostThread
 
         public Thread GetThreadById(int id)
         {
-            return this.context.Threads.Where(x => x.Id == id).SingleOrDefault();
+            return this.context.Threads.Where(x => x.ThreadId == id).SingleOrDefault();
         }
 
         public void SaveThread(Models.Thread thread)
@@ -34,7 +34,7 @@ namespace MessageBoardApp.Services.PostThread
 
         public void DeleteThread(int id)
         {
-            var thread = this.context.Threads.Where(x => x.Id == id).SingleOrDefault();
+            var thread = this.context.Threads.Where(x => x.ThreadId == id).SingleOrDefault();
             this.context.Threads.Remove(thread);
             this.context.SaveChanges();
         }

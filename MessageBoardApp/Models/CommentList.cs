@@ -6,17 +6,10 @@ using System.Web;
 
 namespace MessageBoardApp.Models
 {
-    public class Thread
+    public class CommentList
     {
-
         public int ThreadId { get; set; }
-
-        public string Title { get; set; }
-
-        public string Message { get; set; }
-
-        public string Author { get; set; }
-
+        public List<Comment> Comments { get; set; }
 
     }
 }

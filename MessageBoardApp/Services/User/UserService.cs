@@ -18,13 +18,23 @@ namespace MessageBoardApp.Services
             this.context = new MessageBoardAppContext();
         }
 
+        public List<User> GetUsers()
+        {
+            return this.context.Users.ToList();
+        }
+
+        public User getUser(string name)
+        {
+            return this.context.Users.Where(x => x.Username == name).FirstOrDefault();
+        }
+
 
         public bool Authenticate(string username, string password)
         {
             string encryptedPassword = this.encryptor.Encrypt(password);
 
             User user = this.context.Users.Where(x => x.Username.ToLower() == username.ToLower() 
-                && x.Password == encryptedPassword).SingleOrDefault();
+                && x.Password == encryptedPassword).FirstOrDefault();
 
             if (user == null)
             {

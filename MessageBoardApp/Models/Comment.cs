@@ -8,6 +8,7 @@ namespace MessageBoardApp.Models
 {
     public class Comment
     {
+        [Key]
         public int commentId { get; set; }
 
         public string Text { get; set; }
@@ -15,8 +16,7 @@ namespace MessageBoardApp.Models
         public string Author { get; set; }
 
 
-       /* [ForeignKey("Thread")]
-        public int Id { get; set; }*/
+        public int ThreadId { get; set; }
        
     }
 }
