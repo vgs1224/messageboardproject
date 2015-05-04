@@ -3,7 +3,7 @@ namespace MessageBoardApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class threadlistandsearch : DbMigration
+    public partial class final : DbMigration
     {
         public override void Up()
         {

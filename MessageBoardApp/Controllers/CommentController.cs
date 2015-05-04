@@ -62,7 +62,7 @@ namespace MessageBoardApp.Controllers
         public ActionResult Delete(int id)
         {
             this.commentService.DeleteComment(id);
-            return RedirectToAction("Index", "Threads");
+            return RedirectToAction("Index", "Thread");
 
         }
 

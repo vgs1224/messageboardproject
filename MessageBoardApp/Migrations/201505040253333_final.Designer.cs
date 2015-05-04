@@ -7,13 +7,13 @@ namespace MessageBoardApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class threadlistandsearch : IMigrationMetadata
+    public sealed partial class final : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(threadlistandsearch));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(final));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505021926187_thread list and search"; }
+            get { return "201505040253333_final"; }
         }
         
         string IMigrationMetadata.Source

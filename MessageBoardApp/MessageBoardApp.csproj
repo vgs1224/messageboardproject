@@ -137,9 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505021926187_thread list and search.cs" />
-    <Compile Include="Migrations\201505021926187_thread list and search.Designer.cs">
-      <DependentUpon>201505021926187_thread list and search.cs</DependentUpon>
+    <Compile Include="Migrations\201505040253333_final.cs" />
+    <Compile Include="Migrations\201505040253333_final.Designer.cs">
+      <DependentUpon>201505040253333_final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -214,8 +214,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505021926187_thread list and search.resx">
-      <DependentUpon>201505021926187_thread list and search.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505040253333_final.resx">
+      <DependentUpon>201505040253333_final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

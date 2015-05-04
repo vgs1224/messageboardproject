@@ -33,5 +33,5 @@ C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBo
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBoardApp\bin\Unity.Mvc5.dll
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBoardApp\bin\Microsoft.Practices.Unity.xml
 C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBoardApp\bin\Microsoft.Practices.Unity.Configuration.xml
-C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBoardApp\obj\Debug\MessageBoardApp.Migrations.threadlistandsearch.resources
-C:\Users\Vincent\Documents\Visual Studio 2013\Projects\MessageBoardApp\MessageBoardApp\obj\Debug\MessageBoardApp.csproj.GenerateResource.Cache
+C:\Users\Vincent\documents\visual studio 2013\Projects\MessageBoardApp\MessageBoardApp\obj\Debug\MessageBoardApp.Migrations.final.resources
+C:\Users\Vincent\documents\visual studio 2013\Projects\MessageBoardApp\MessageBoardApp\obj\Debug\MessageBoardApp.csproj.GenerateResource.Cache
